@@ -1,0 +1,20 @@
+{
+
+  "iPhone 6s": {
+    "deviceName": "iPhone 6s",
+    "platformName": "iOS",
+    "platformVersion": "10.3",
+    "browserName": "safari",
+    "automationName": "XCUITEST"
+  },
+
+  "Nexus 6 API 24": {
+    "deviceName": "Nexus 6 API 24",
+    "platformName": "Android",
+    "platformVersion": "7.0",
+    "avd": "Nexus 6 API 24",
+    "browserName": "chrome",
+    "avdReadyTimeout": 60000
+  }
+  
+}
