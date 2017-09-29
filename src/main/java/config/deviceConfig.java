@@ -26,7 +26,7 @@ public class deviceConfig {
 	    this.url = System.getProperty("appium", "http://0.0.0.0:4723/wd/hub");
 	    
 		// changes device in use
-		String deviceName = System.getProperty("deviceName", "iPhone 6s");
+		String deviceName = System.getProperty("deviceName", "iPad Air");
 		this.deviceMap = getDevice(deviceName);
 	}
 

@@ -1,4 +1,4 @@
-package support;
+package stepDefinitions;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -21,16 +21,14 @@ public class Hooks {
   private static boolean setup = false;
   private static DriverUtils driverUtils;
 
-  private RemoteWebDriver driver;
-
+  public static RemoteWebDriver driver;
+  
   public RemoteWebDriver getDriver() {
-    return driver;
+      return driver;
   }
-
 
   @Before(order = 1)
   public void beforeAll() throws Throwable {
-
     if (!setup) {
       Logger.getLogger("org.openqa.selenium.remote").setLevel(Level.OFF);
       deviceConfig config = new deviceConfig();

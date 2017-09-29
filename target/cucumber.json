@@ -1,0 +1,137 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 65577808,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 36022019035,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Appium homepage can be found within search results",
+        "description": "",
+        "id": "demo;appium-homepage-can-be-found-within-search-results",
+        "after": [
+          {
+            "result": {
+              "duration": 516136243,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3163185124,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat stepDefinitions.DemoStepDefs.i_am_on(DemoStepDefs.java:27)\n\tat ✽.Given I am on \"http://www.google.com\"(src/test/resources/features/Demo.feature:7)\n",
+              "status": "pending"
+            },
+            "line": 7,
+            "name": "I am on \"http://www.google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://www.google.com",
+                  "offset": 9
+                }
+              ],
+              "location": "DemoStepDefs.i_am_on(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I search for \"appium\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "appium",
+                  "offset": 14
+                }
+              ],
+              "location": "DemoStepDefs.i_search_for(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "select \"Appium\" in the search results",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Appium",
+                  "offset": 8
+                }
+              ],
+              "location": "DemoStepDefs.select_in_the_search_results(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "the User views the Appium screen \"http://appium.io/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://appium.io/",
+                  "offset": 34
+                }
+              ],
+              "location": "DemoStepDefs.the_User_views_the_Appium_screen(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@C001"
+          },
+          {
+            "line": 5,
+            "name": "@smokeTest"
+          },
+          {
+            "line": 5,
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Demo",
+    "description": "As a User,\r\nGoogle searching should work on all platforms",
+    "id": "demo",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Demo.feature"
+  }
+]
