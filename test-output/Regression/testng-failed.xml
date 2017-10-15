@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Regression]" parallel="tests">
+  <test name="ios(failed)" parallel="tests">
+    <parameter name="platformVersion" value="10.3"/>
+    <parameter name="automationName" value="XCUITEST"/>
+    <parameter name="browserName" value="safari"/>
+    <parameter name="platformName" value="iOS"/>
+    <parameter name="deviceName" value="iPad Air"/>
+    <parameter name="URL" value="0.0.0.0:4723/wd/hub"/>
+    <classes>
+      <class name="runner.RunCukesTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature"/>
+          <include name="createDriver"/>
+          <include name="stopAppium"/>
+          <include name="tearDownClass"/>
+          <include name="startAppium"/>
+        </methods>
+      </class> <!-- runner.RunCukesTest -->
+    </classes>
+  </test> <!-- ios(failed) -->
+  <test name="android(failed)" parallel="tests">
+    <parameter name="platformVersion" value="7.0"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="deviceName" value="Nexus 6 API 24"/>
+    <parameter name="avd" value="Nexus_6_API_24"/>
+    <parameter name="avdReadyTimeout" value="60000"/>
+    <parameter name="URL" value="127.0.0.1:4724/wd/hub"/>
+    <classes>
+      <class name="runner.RunCukesTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature"/>
+          <include name="createDriver"/>
+          <include name="stopAppium"/>
+          <include name="tearDownClass"/>
+          <include name="startAppium"/>
+        </methods>
+      </class> <!-- runner.RunCukesTest -->
+    </classes>
+  </test> <!-- android(failed) -->
+</suite> <!-- Failed suite [Regression] -->

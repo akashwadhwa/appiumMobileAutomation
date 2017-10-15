@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" parallel="tests" thread-count="2">
+<test name="ios">
+		<parameter name="deviceName" value="iPad Air"/>
+		<parameter name="platformName" value="iOS"/>
+		<parameter name="platformVersion" value="10.3"/>
+		<parameter name="browserName" value="safari"/>
+		<parameter name="automationName" value="XCUITEST"/>
+		<parameter name="URL" value="0.0.0.0:4723/wd/hub"/>
+<classes>
+<class name="runner.RunCukesTest"></class>
+</classes>
+</test>
+
+ <test name="android">
+		<parameter name="deviceName" value="Nexus 6 API 24"/>
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="7.0"/>
+		<parameter name="avd" value="Nexus_6_API_24"/>
+		<parameter name="browserName" value="chrome"/>
+		<parameter name="avdReadyTimeout" value="60000"/>
+		<parameter name="URL" value="127.0.0.1:4724/wd/hub"/>
+<classes>
+<class name="runner.RunCukesTest"></class>
+</classes>
+</test>
+
+</suite>

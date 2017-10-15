@@ -2,40 +2,49 @@ package driver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Map;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import utility.launchEmulator;
 
 public class DriverUtils {
-
-	private final URL url;
-	private final DesiredCapabilities desiredCapabilities;
-	private final String platform;
-
-	public DriverUtils(String url, Map<String, Object> deviceMap) throws MalformedURLException {
-		this.url = new URL(url);
-		this.desiredCapabilities = new DesiredCapabilities(deviceMap);
-		this.platform = desiredCapabilities.getCapability("platformName").toString();
-	}
 	
-	public RemoteWebDriver createDriver() throws MalformedURLException {
+	public static RemoteWebDriver driver;
 
-	    switch (platform.toUpperCase()) {
+	public static RemoteWebDriver createDriver(String deviceName, String platformName, String platformVersion,
+			String browserName, String automationName, String avd, String avdReadyTimeout, String URL) throws MalformedURLException {
+		
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+	    switch (platformName.toUpperCase()) {
 	      case "ANDROID":
-	        return new AndroidDriver<WebElement>(url, desiredCapabilities);
+	    	    capabilities.setCapability("deviceName", deviceName);
+				capabilities.setCapability(CapabilityType.BROWSER_NAME, browserName);
+				capabilities.setCapability("platformVersion", platformVersion);
+				capabilities.setCapability("platformName", platformName);
+				capabilities.setCapability("avd", avd);
+				capabilities.setCapability("avdReadyTimeout", avdReadyTimeout);
+				launchEmulator.launchAndroidEmulator(avd);
+	        return new AndroidDriver<WebElement>(new URL("http://"+URL), capabilities);
 	      case "IOS":
-	        return new IOSDriver<WebElement>(url, desiredCapabilities);
+	    	  capabilities.setCapability("deviceName", deviceName);
+				capabilities.setCapability(CapabilityType.BROWSER_NAME, browserName);
+				capabilities.setCapability("platformVersion", platformVersion);
+				capabilities.setCapability("platformName", platformName);
+				capabilities.setCapability("automationName", automationName);
+				capabilities.setCapability("avdReadyTimeout", avdReadyTimeout);
+	        return new IOSDriver<WebElement>(new URL("http://"+URL), capabilities);
 	      case "DESKTOP":
-	        return new RemoteWebDriver(url, desiredCapabilities);
+	        return new RemoteWebDriver(new URL("http://"+URL), capabilities);
 	      default:
 	        throw new IllegalArgumentException(
-	                String.format("Driver type not implemented: %s", platform));
+	                String.format("Driver type not implemented: %s", platformName));
 	    }
 	  }
+	
 
 }

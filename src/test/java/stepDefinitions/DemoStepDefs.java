@@ -7,16 +7,16 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import runner.RunCukesTest;
 
 public class DemoStepDefs{
 
-	static Hooks hooks;
+	static RunCukesTest hooks;
 	
-	public DemoStepDefs(Hooks hooks){
+	public DemoStepDefs(RunCukesTest hooks){
 		this.hooks=hooks;
 	}
 
@@ -24,7 +24,6 @@ public class DemoStepDefs{
 	public static void i_am_on(String arg1) throws Throwable {
 		hooks.getDriver().get("http://saucelabs.com/test/guinea-pig");
 		Thread.sleep(1000);
-		throw new PendingException();
 	}
 
 	@When("^I search for \"([^\"]*)\"$")
@@ -32,7 +31,6 @@ public class DemoStepDefs{
 		WebElement idElement = hooks.getDriver().findElement(By.id("i_am_an_id"));
 		assertNotNull(idElement);
 		assertEquals("I am a div", idElement.getText());
-		throw new PendingException();
 	}
 
 	@When("^select \"([^\"]*)\" in the search results$")
@@ -43,8 +41,7 @@ public class DemoStepDefs{
 		WebElement submitElement = hooks.getDriver().findElement(By.id("submit"));
 		assertNotNull(submitElement);
 		submitElement.click();
-		Thread.sleep(7000);
-		throw new PendingException();
+		Thread.sleep(2000);
 	}
 
 	@Then("^the User views the Appium screen \"([^\"]*)\"$")
@@ -53,7 +50,6 @@ public class DemoStepDefs{
 		assertNotNull(yourCommentsElement);
 		assertTrue(hooks.getDriver().findElement(By.id("your_comments")).getText().contains("This is an awesome comment"));
 		System.out.println(hooks.getDriver().getCurrentUrl());
-		throw new PendingException();
 	}
 
 

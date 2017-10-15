@@ -9,7 +9,7 @@ public class AppiumServerService {
 	
 	private static AppiumDriverLocalService service;
 	
-	public static void startAppium() {
+	public static void startAppium(String ipAddress, int portNumber) {
 		String osName = System.getProperty("os.name").toLowerCase();
 
 		String nodePath = null;
@@ -28,8 +28,8 @@ public class AppiumServerService {
 		service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
 				.usingDriverExecutable(new File(nodePath))
 				.withAppiumJS(new File(appiumPath))
-				.withIPAddress("0.0.0.0")
-				.usingPort(4723));
+				.withIPAddress(ipAddress)
+				.usingPort(portNumber));
 		System.out.println("Starting Appium server"); 
 		service.start();
 	}

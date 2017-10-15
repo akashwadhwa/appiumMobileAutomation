@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression" duration-ms="33369" started-at="2017-10-15T03:42:34Z" finished-at="2017-10-15T03:43:07Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@210366b4]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@627551fb]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="android" duration-ms="20370" started-at="2017-10-15T03:42:34Z" finished-at="2017-10-15T03:42:54Z">
+      <class name="runner.RunCukesTest">
+        <test-method status="PASS" signature="startAppium()[pri:0, instance:runner.RunCukesTest@627551fb]" name="startAppium" is-config="true" duration-ms="16538" started-at="2017-10-15T09:12:17Z" finished-at="2017-10-15T09:12:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppium -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@627551fb]" name="setUpClass" is-config="true" duration-ms="432" started-at="2017-10-15T09:12:34Z" finished-at="2017-10-15T09:12:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="createDriver(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.RunCukesTest@627551fb]" name="createDriver" is-config="true" duration-ms="10508" started-at="2017-10-15T09:12:34Z" finished-at="2017-10-15T09:12:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nexus 6 API 24]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Nexus_6_API_24]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[60000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[127.0.0.1:4724/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDriver -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@627551fb]" name="feature" duration-ms="9205" started-at="2017-10-15T09:12:45Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-10-15T09:12:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@627551fb]" name="tearDownClass" is-config="true" duration-ms="14" started-at="2017-10-15T09:12:54Z" finished-at="2017-10-15T09:12:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="stopAppium()[pri:0, instance:runner.RunCukesTest@627551fb]" name="stopAppium" is-config="true" duration-ms="91" started-at="2017-10-15T09:13:12Z" finished-at="2017-10-15T09:13:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopAppium -->
+      </class> <!-- runner.RunCukesTest -->
+    </test> <!-- android -->
+    <test name="ios" duration-ms="33369" started-at="2017-10-15T03:42:34Z" finished-at="2017-10-15T03:43:07Z">
+      <class name="runner.RunCukesTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunCukesTest@210366b4]" name="setUpClass" is-config="true" duration-ms="439" started-at="2017-10-15T09:12:34Z" finished-at="2017-10-15T09:12:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="createDriver(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.RunCukesTest@210366b4]" name="createDriver" is-config="true" duration-ms="27189" started-at="2017-10-15T09:12:34Z" finished-at="2017-10-15T09:13:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iPad Air]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iOS]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10.3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[XCUITEST]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[0.0.0.0:4723/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDriver -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunCukesTest@210366b4]" name="feature" duration-ms="5714" started-at="2017-10-15T09:13:01Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-10-15T09:13:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunCukesTest@210366b4]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2017-10-15T09:13:07Z" finished-at="2017-10-15T09:13:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.RunCukesTest -->
+    </test> <!-- ios -->
+  </suite> <!-- Regression -->
+</testng-results>

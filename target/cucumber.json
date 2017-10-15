@@ -3,49 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 65577808,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeAll()"
-            }
-          },
-          {
-            "result": {
-              "duration": 36022019035,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeScenario()"
-            }
-          }
-        ],
         "line": 6,
         "name": "Appium homepage can be found within search results",
         "description": "",
         "id": "demo;appium-homepage-can-be-found-within-search-results",
-        "after": [
-          {
-            "result": {
-              "duration": 516136243,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterScenario(Scenario)"
-            }
-          }
-        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3163185124,
-              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat stepDefinitions.DemoStepDefs.i_am_on(DemoStepDefs.java:27)\n\tat ✽.Given I am on \"http://www.google.com\"(src/test/resources/features/Demo.feature:7)\n",
-              "status": "pending"
+              "duration": 3065173303,
+              "status": "passed"
             },
             "line": 7,
             "name": "I am on \"http://www.google.com\"",
@@ -62,7 +30,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 104454571,
+              "status": "passed"
             },
             "line": 8,
             "name": "I search for \"appium\"",
@@ -79,7 +48,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2392644632,
+              "status": "passed"
             },
             "line": 9,
             "name": "select \"Appium\" in the search results",
@@ -96,7 +66,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 143210655,
+              "status": "passed"
             },
             "line": 10,
             "name": "the User views the Appium screen \"http://appium.io/\"",
